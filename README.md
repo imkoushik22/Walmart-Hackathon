@@ -16,7 +16,7 @@ Directory Structure:
 |		+--  fonts
 |		+--  js
 |		+--  scss
-|	+-- templates
+|   +-- templates
 |		+--  various html base templates
 ```
 
