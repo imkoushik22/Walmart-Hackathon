@@ -68,8 +68,9 @@ def query(img_path, n, emb_dict, model, save_dir):
         dist.pop(keyMax)
     #sort_orders = sorted(dist.items(), key=lambda x: x[1], reverse=True)
     imgs = []
+    dataset_path = "/home/hari/Desktop/Hari/CS endeavours/temp/Backend/dataset/images/"
     for k in dist.keys():
-        imgs.append("dataset/images/" + k)
+        imgs.append(dataset_path + k)
 
     #pyplot.plot_images(imgs, max_images=20, img_width=150)
     print(imgs)

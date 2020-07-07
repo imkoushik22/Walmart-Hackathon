@@ -1,6 +1,8 @@
 from flask import Flask,abort,render_template,request,redirect,url_for
 from werkzeug import secure_filename
 import os     
+import Fashion_reco as nn
+import ipyplot
 
 app = Flask(__name__)
 
@@ -111,8 +113,13 @@ def uploader():
       #f.filename = './uploads/' + f.filename
       f.save(secure_filename(f.filename))
       #f.save(secure_filename(os.path.join(app.config['UPLOAD_FOLDER'],f.filename)))
+      save_dir = "/home/hari/Desktop/Hari/CS endeavours/Walmart-Hackathon/Frontend/static/images/"
+      model, emb_dict = nn.model_start()
+      x = f.filename
+      ipyplot.plot_images([x], max_images=20, img_width=150)
+      nn.query(x, 12, emb_dict, model, save_dir)
       #return 'Image uploaded successfully'
-      return render_template("shop.html")
+      return redirect(url_for('shop'))
 
 
 if __name__ == "__main__":
