@@ -5,6 +5,10 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("shop.html")
+
+@app.route("/shop.html")
+def shop():
+    return render_template("shop.html")
     
 @app.route("/hari")
 def salvador():
