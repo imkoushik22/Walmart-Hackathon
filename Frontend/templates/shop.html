@@ -35,7 +35,7 @@
 
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
-          <img src="images/walmart2.png" alt="Image" class="img-fluid" width="200" height="200">
+          <img src="{{ url_for('static',    filename='images/walmart2.png') }}"  alt="Image" class="img-fluid" width="200" height="200">
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
@@ -86,26 +86,27 @@
             <h1>Arrivals Sales</h1>
             <p>
               <input type="file" id="real-file" hidden="hidden" />
-<button type="button" id="custom-button">CHOOSE A FILE</button>
+<!-- <button type="button" id="custom-button">CHOOSE A FILE</button> -->
+<a href="/upload/" class="button" button type="button" id="custom-button">CHOOSE A FILE</a>
 <span id="custom-text">No file chosen, yet.</span>
             </p>
             <script type="text/javascript">
               const realFileBtn = document.getElementById("real-file");
               const customBtn = document.getElementById("custom-button");
               const customTxt = document.getElementById("custom-text");
-              customBtn.addEventListener("click", function() {
-                realFileBtn.click();
-              });
+              // customBtn.addEventListener("click", function() {
+              //   realFileBtn.click();
+              // });
 
-              realFileBtn.addEventListener("change", function() {
-              if (realFileBtn.value) {
-                customTxt.innerHTML = realFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-              )[1];
-              } else {
-                customTxt.innerHTML = "No file chosen, yet.";
-              }
-              });
+              // realFileBtn.addEventListener("change", function() {
+              // if (realFileBtn.value) {
+              //   customTxt.innerHTML = realFileBtn.value.match(
+              //   /[\/\\]([\w\d\s\.\-\(\)]+)$/
+              // )[1];
+              // } else {
+              //   customTxt.innerHTML = "No file chosen, yet.";
+              // }
+              // });
 
             </script>
 
@@ -388,7 +389,7 @@
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
             <h3 class="footer-heading mb-4">Promo</h3>
             <a href="#" class="block-6">
-              <img src="images/about_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
+              <img src="{{ url_for('static',    filename='images/about_1.jpg') }}" alt="Image placeholder" class="img-fluid rounded mb-4">
               <h3 class="font-weight-light  mb-0">Finding Your Perfect Shirts This Summer</h3>
               <p>Promo from  July 15 &mdash; 25, 2019</p>
             </a>
