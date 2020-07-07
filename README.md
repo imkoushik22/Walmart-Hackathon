@@ -1,8 +1,10 @@
 # Walmart
 
 @Shivaank, Jaya: In-order to test out the template locally,
-One-time installation: `npm install http-server -g`
-Serve locally using: `http-server`
+clone repo, install flask, and run main.py.
+
+`pip install flask`
+`python main.py`
 
 It will serve the directory on localhost 8080 by default.
 
