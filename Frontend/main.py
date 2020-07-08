@@ -6,6 +6,9 @@ import ipyplot
 
 app = Flask(__name__)
 
+save_dir = "/home/hari/Desktop/Hari/CS endeavours/Walmart-Hackathon/Frontend/static/images/"
+model, emb_dict = nn.model_start()
+
 @app.route("/")
 def home():
     return render_template("shop.html")
@@ -113,8 +116,6 @@ def uploader():
       #f.filename = './uploads/' + f.filename
       f.save(secure_filename(f.filename))
       #f.save(secure_filename(os.path.join(app.config['UPLOAD_FOLDER'],f.filename)))
-      save_dir = "/home/hari/Desktop/Hari/CS endeavours/Walmart-Hackathon/Frontend/static/images/"
-      model, emb_dict = nn.model_start()
       x = f.filename
       ipyplot.plot_images([x], max_images=20, img_width=150)
       nn.query(x, 12, emb_dict, model, save_dir)
