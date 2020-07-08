@@ -27,3 +27,5 @@ Directory Structure:
 |   +-- embed_dict.npy
 ```
 
+Authors: Koushik S, Harivallabha Rangarajan, Shivaank Agarwal, Jaya Venkatesh; BITS Pilani - Hyderabad Campus
+
