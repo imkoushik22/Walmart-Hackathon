@@ -1,12 +1,14 @@
 # Walmart
 
-@Shivaank, Jaya: In-order to test out the template locally,
+Install the necessary dependencies.
+
+TechStack used: Tensorflow; Flask; HTML; CSS; JS
+
+@Shivaank, Jaya - Instructions to run: In-order to test out the template locally,
 clone repo, install flask, and run main.py.
 
 `pip install flask`
 `python main.py`
-
-It will serve the directory on localhost 8080 by default.
 
 Directory Structure: 
 ```
@@ -20,5 +22,8 @@ Directory Structure:
 |		+--  scss
 |   +-- templates
 |		+--  various html base templates
+|   +-- Fasion_reco.py
+|   +-- embeddings.csv
+|   +-- embed_dict.npy
 ```
 
